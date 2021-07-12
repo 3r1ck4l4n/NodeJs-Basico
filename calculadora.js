@@ -7,7 +7,11 @@ const sumar = require('./sumar');
 
 let numero1=2;
 let numero2=3;
-console.log(sumar(numero1,numero2));
-console.log(restar(numero1,numero2));
-console.log(dividir(numero1,numero2));
-console.log(multiplicar(numero1,numero2));
+let calculadora=(numero1, numero2, operacion)=>{
+    return operacion(numero1, numero2);
+}
+console.log(calculadora(numero1,numero2, sumar));
+console.log(calculadora(numero1,numero2, restar));
+console.log(calculadora(numero1,numero2, multiplicar));
+console.log(calculadora(numero1,numero2, dividir));
+
